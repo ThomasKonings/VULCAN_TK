@@ -6,3 +6,5 @@
 
 #The chem_funs.py function is created in every vulcan run if you don't use the -n flag.
 chem_funs.py
+
+/vulcan_python_scripts/__pycache__/
