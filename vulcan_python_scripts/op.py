@@ -2807,12 +2807,18 @@ class Output(object):
         # copy the vulcan_cfg.py file
         with open('vulcan_cfg.py' ,'r') as f:
             cfg_str = f.read()
-        with open(dname + '/' + output_dir + "cfg_" + out_name[:-3] + "txt", 'w') as f: f.write(cfg_str)
+
+        #@Thomas: output_dir used to be a relative path, I specify an absulte path now...
+        # with open(dname + '/' + output_dir + "cfg_" + out_name[:-3] + "txt", 'w') as f: f.write(cfg_str)
+        with open(output_dir + "cfg_" + out_name[:-3] + "txt", 'w') as f: f.write(cfg_str)
     
     def save_out(self, var, atm, para, dname): 
         output_dir, out_name = vulcan_cfg.output_dir, vulcan_cfg.out_name
-        output_file = dname + '/' + output_dir + out_name
-        
+
+        #@Thomas: output_dir used to be a relative path, I specify an absulte path now...
+        # output_file = dname + '/' + output_dir + out_name
+        output_file = output_dir + out_name
+
         if not os.path.exists(output_dir):
             print ('The output directory assigned in vulcan_cfg.py does not exist.')
             print( 'Directory ' , output_dir,  " created.")
