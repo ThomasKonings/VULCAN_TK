@@ -1,2 +1,5 @@
 /fastchem_vulcan/*
+/fastchem_vulcan/output/
+/fastchem_vulcan/input/
 /atm/VULCAN_input_files_WASP107b/
+/__pycache__/

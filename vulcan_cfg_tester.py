@@ -1,7 +1,7 @@
 # ============================================================================= 
 # Configuration file of VULCAN: WASP-107b
 # ============================================================================= 
-
+print("test ----- here")
 # ====== Setting up the elements included in the network ======
 atom_list = ['H', 'O', 'C', 'N', 'S']
 # ====== Setting up paths and filenames for the input and output files  ======
@@ -17,10 +17,12 @@ sflux_file = 'atm/stellar_flux/VPL_solar.txt' # sflux-HD189_B2020.txt This is th
 #bot_BC_flux_file = 'atm/BC_bot.txt' # the file for the lower boundary conditions
 #vul_ini = 'output/HD189-nominal.vul' # the file to initialize the abundances for ini_mix = 'vulcan_ini'
 # output:
-output_dir = '../VULCAN_output/WASP-107b/10Z/Tint300/'
+# output_dir = '../VULCAN_output/WASP-107b/10Z/Tint300/'
+output_dir = '../VULCAN_output/testing/'
 plot_dir = 'plot/'
 movie_dir = 'plot/movie/'
-out_name =  'WASP-107b_picaso_Tint300_10Z_VULCAN.vul' # output file name
+# out_name =  'WASP-107b_picaso_Tint300_10Z_VULCAN.vul' # output file name
+out_name = 'testing_this_should_work.vul'
 
 # ====== Setting up the elemental abundance ======
 use_solar = False # True: using the solar abundance from Table 10. K.Lodders 2009; False: using the customized elemental abundance. 
@@ -151,7 +153,7 @@ post_conden_rtol = 0.1 # switched to this value after fix_species_time
 # ====== Setting up for output and plotting ======
 # plotting:
 plot_TP = False
-use_live_plot = True
+use_live_plot = False
 use_live_flux = False
 use_plot_end = False
 use_plot_evo = False
