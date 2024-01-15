@@ -23,7 +23,7 @@ output_dir = '/STER/thomasko/VULCAN_output/testing/'
 plot_dir = 'plot/'
 movie_dir = 'plot/movie/'
 # out_name =  'WASP-107b_picaso_Tint300_10Z_VULCAN.vul' # output file name
-out_name = 'testing2.vul'
+out_name = 'testing_new.vul'
 
 # ====== Setting up the elemental abundance ======
 use_solar = False # True: using the solar abundance from Table 10. K.Lodders 2009; False: using the customized elemental abundance. 
@@ -70,11 +70,11 @@ if use_photo == False and use_ion == True:
 # ====== Setting up parameters for the atmosphere ======
 atm_base = 'H2' #Options: 'H2', 'N2', 'O2', 'CO2 -- the bulk gas of the atmosphere: changes the molecular diffsion, thermal diffusion factor, and settling velocity
 rocky = False # for the surface gravity
-nz = 150  # number of vertical layers
-P_b = 3e2 * 1e6 # pressure at the bottom (dyne/cm^2)
-P_t = 1e-7 * 1e6 # pressure at the top (dyne/cm^2)
-use_Kzz = False
-use_moldiff = False
+nz = 100  # number of vertical layers
+P_b = 1e2 * 1e6 # pressure at the bottom (dyne/cm^2)
+P_t = 1e-4 * 1e6 # pressure at the top (dyne/cm^2)
+use_Kzz = True
+use_moldiff = True
 use_vz = False
 
 atm_type = 'file'  # Options: 'isothermal', 'analytical', 'file', or 'vulcan_ini' 'table'
@@ -91,7 +91,7 @@ gs = 269.28         # surface gravity (cm/s^2)  (HD189:2140  HD209:936)
 # T_int, T_irr, ka_L, ka_S, beta_S, beta_L
 #para_warm = [120., 1500., 0.1, 0.02, 1., 1.]
 #para_anaTP = para_warm
-const_Kzz = 1.E10 # (cm^2/s) Only reads when use_Kzz = True and Kzz_prof = 'const'
+const_Kzz = 1.E12 # (cm^2/s) Only reads when use_Kzz = True and Kzz_prof = 'const'
 const_vz = 0 # (cm/s) Only reads when use_vz = True and vz_prof = 'const'
 
 # frequency for updating dz and dzi due to change of mu

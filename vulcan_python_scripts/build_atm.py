@@ -28,13 +28,13 @@ compo_row = list(compo['species'])
 
 #@Thomas
 import sys
-sys.path.append('/STER/thomasko/VULCAN_TK/vulcan_python_scripts/') #@Thomas
-#This is needed to fix the line that says: sys.path.append('/STER/thomasko/VULCAN_TK/vulcan_python_scripts/') #@Thomas
+sys.path.append('/STER/thomasko/VULCAN_TK/vulcan_python_scripts/')
 
 #@Thomas 2
-path_to_fastchem = vulcan_cfg.vulcan_dir
-#This is needed because the fastchem directory is hardcoded in several places in this script
-# Just ctrl-F for 'path_to_fastchem'
+# 10/01/2023 -> This is needed because the fastchem directory is hardcoded in several places in this script
+# 15/01/2023 -> removed because I/O causes problems with central fast_chem... 
+# path_to_fastchem = vulcan_cfg.vulcan_dir
+path_to_fastchem = "" #Setting this to an empty string will make the code look for fastchem in the current working directory
 
 
 class InitialAbun(object):
