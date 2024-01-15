@@ -8,3 +8,4 @@
 chem_funs.py
 
 /vulcan_python_scripts/__pycache__/
+*.code-workspace
