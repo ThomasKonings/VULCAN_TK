@@ -385,7 +385,7 @@ class Atm(object):
                     PTK_fun['pK'] = interpolate.interp1d(p_file, Kzz_file, assume_sorted = False, bounds_error=False, fill_value=Kzz_file[np.argmin(p_file)] )
                     data_atm.Kzz = PTK_fun['pK'](data_atm.pico[1:-1])
             
-            elif self.Kzz_prof == 'const': data_atm.Kzz = np.repeat(self.const_Kzz,nz-1)
+            elif self.Kzz_prof == 'const': data_atm.Kzz = np.repeat(self.const_Kzz,nz-1); print("HEY you are using a constant Kzz profile")
         
         elif self.type == 'vulcan_ini':
             print ("Initializing PT from the prvious run " + vulcan_cfg.vul_ini)
